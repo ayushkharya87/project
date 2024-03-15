@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,800;1,800&display=swap');
+
+.heading {
+    text-align: center;
+    margin-top: 4rem;
+    line-height: 2rem;
+}
+
+.heading-1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: Jost;
+}
+
+.heading-2 {
+    font-family: Jost;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgba(77, 207, 187, 1);
+}
+
+.para p {
+    text-align: center;
+    color: rgba(212, 212, 212, 1);
+    margin-top: 1.2rem;
+    font-family: Jost;
+    font-weight: 400;
+    line-height: 1rem;
+    font-size: 1rem;
+}
+
+/* ----- */
+.content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* slider */
+
+.slider {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* animation button */
+.project-btn {
+    margin-top: 10rem;
+}
+.project-btn button {
+    padding: 8px 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    width: 8rem;
+    border: 1px solid white;
+    font-weight: 800;
+    font-family: Jost;
+    gap: 10px;
+    transition: width ease 0.4s;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;  
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.project-btn button:hover {
+    color: black;
+  }
+.project-btn button::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    bottom: -100%;
+    left: 0;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    z-index: -1;
+  }
+.project-btn button:hover::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+  }
+
+
+.rotate {
+    margin-top: 10rem;
+}
+
+
+@media (max-width: 768px) {
+    .heading-1 {
+        font-size: 1.5rem; 
+    }
+
+    .heading-2 {
+        font-size: 1.8rem; 
+    }
+
+    .para p {
+        font-size: 0.8rem; 
+    }
+
+    .project-btn button {
+        font-size: 14px; 
+    }
+}
